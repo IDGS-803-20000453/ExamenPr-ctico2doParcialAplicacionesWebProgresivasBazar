@@ -1,0 +1,28 @@
+.main-image {
+  width: 500px; /* Utiliza el 100% del ancho del contenedor hasta un máximo */
+  max-width: 500px; /* Ancho máximo que la imagen puede tener */
+  height: 500px; /* Altura fija para todas las imágenes */
+  max-height: 500px; /* Altura máxima que la imagen puede tener */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+  margin-bottom: 15px; /* Espacio debajo de la imagen */
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: start;
+  gap: 10px; /* Espacio entre miniaturas */
+}
+
+.img-thumbnail {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease-in-out;
+  width: 60px; /* Ancho para las miniaturas */
+  height: 60px; /* Altura para las miniaturas */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+}
+
+.img-thumbnail.selected, .img-thumbnail:hover {
+  opacity: 1;
+  border: 2px solid #007bff; /* Resalta la miniatura seleccionada o al hacer hover */
+}
